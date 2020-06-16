@@ -16,7 +16,7 @@ public class FormularioMap {
 		
 	}
 	
-	public Element inputName = new Element(driver,ByValue.ID,"inputName");
+	public Element inputName = new Element(driver,ByValue.XPATH,"//input[@id='inputName']");
 	public Element inputAdress = new Element(driver,ByValue.ID, "address");
 	public Element inputCity = new Element(driver,ByValue.ID, "city");
 	public Element inputState = new Element(driver,ByValue.ID, "state");
@@ -36,6 +36,6 @@ public class FormularioMap {
 	
 	public Element inputNameCardr= new Element(driver, ByValue.ID, "nameOnCard");
 	public Element inputRemenber= new Element(driver, ByValue.ID, "rememberMe");
-	public Element btnSubmit= new Element(driver, ByValue.ID, "//input[@type='submit']");
+	public Element btnSubmit= new Element(driver, ByValue.XPATH, "//input[@value='Purchase Flight']");
 
 }

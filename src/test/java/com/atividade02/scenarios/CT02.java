@@ -30,15 +30,24 @@ public class CT02 {
 	@Before
 	public void before() {
 		driver = new Driver().getDriver();
+		//acessar o site
 		Driver.acessarURL(driver, " https://blazedemo.com/");
 		inicioPage = new InicioPage(driver);
 		voosPage = new VoosPage(driver);
+		formularioPage = new FormularioPage(driver);
 	}
 	@Test
 	public void test() {
+		
+		//selecionar o destino
 		inicioPage.selecionarTipoDeViajem();
+		
+		//clicar no primeiro botão
 		voosPage.chooseThis();
+		
+		//preencher o formulario
 		formularioPage.preencherFormulario();
+		//validar mensagem de sucesso
 		formularioPage.validarFormularioMensagemSucesso();
 		try {
 			Thread.sleep(5000);
